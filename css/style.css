@@ -196,3 +196,63 @@ footer a{color:rgba(255,255,255,.6);display:block;margin-bottom:.4rem}
 footer a:hover{color:#fff}
 footer .legal{border-top:1px solid rgba(255,255,255,.12);padding-top:1.4rem;
   display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.82rem}
+
+/* ============================================================
+   BLOG
+   Les en-tetes d article n ont volontairement aucune photo :
+   un code 200 ne dit rien du sujet d une image, et la verif
+   visuelle de 13 heros avait deja coute une correction complete.
+   ============================================================ */
+.hero.slim{padding:clamp(2.6rem,6vw,4rem) 0 clamp(2.2rem,5vw,3rem)}
+.hero.slim h1{max-width:24ch;font-size:clamp(1.9rem,4.2vw,2.9rem)}
+.wrap.narrow{max-width:780px}
+
+/* meta d article */
+.ameta{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin-top:1.6rem;padding-top:1.3rem;
+  border-top:1px solid rgba(255,255,255,.16);font-size:.88rem;color:rgba(255,255,255,.66)}
+.ameta strong{color:#fff;font-weight:600}
+
+/* sommaire */
+.toc{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--r);
+  padding:1.4rem 1.7rem;margin:2.2rem 0}
+.toc h2{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);
+  margin:0 0 .8rem;font-weight:700}
+.toc ol{margin:0;padding-left:1.2rem}
+.toc li{margin-bottom:.42rem;font-size:.95rem}
+.toc a{color:var(--ink-2);font-weight:500}
+.toc a:hover{color:var(--accent-dk)}
+
+/* corps d article */
+.prose h2{font-size:clamp(1.4rem,2.6vw,1.85rem);margin:2.8rem 0 .9rem;scroll-margin-top:90px}
+.prose h3{font-size:1.12rem;margin:1.9rem 0 .5rem}
+.prose ul,.prose ol{margin:0 0 1.2rem 1.2rem}
+.prose li{margin-bottom:.5rem;color:var(--ink-2)}
+.prose blockquote{border-left:3px solid var(--accent);padding:.2rem 0 .2rem 1.4rem;
+  margin:1.8rem 0;font-size:1.08rem;color:var(--ink);font-style:italic}
+.prose blockquote p:last-child{margin-bottom:0}
+
+/* signature */
+.author{display:flex;gap:1.2rem;align-items:flex-start;background:var(--bg-soft);
+  border:1px solid var(--line);border-radius:var(--r);padding:1.5rem 1.7rem;margin:2.6rem 0}
+.author .ini{flex:none;width:52px;height:52px;border-radius:50%;background:var(--accent-soft);
+  color:var(--accent-dk);font-family:var(--fh);font-weight:800;font-size:1.05rem;
+  display:flex;align-items:center;justify-content:center}
+.author h3{margin:0 0 .3rem;font-size:1rem}
+.author p{font-size:.93rem;margin-bottom:.4rem}
+.author p:last-child{margin-bottom:0}
+
+/* liste du blog */
+.posts{display:grid;gap:1.3rem;grid-template-columns:repeat(2,1fr);margin-top:1.8rem}
+@media(max-width:880px){.posts{grid-template-columns:1fr}}
+.post{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);
+  border-radius:var(--r);padding:1.7rem;box-shadow:var(--sh);
+  transition:transform .25s,box-shadow .25s,border-color .25s}
+.post:hover{transform:translateY(-3px);box-shadow:var(--sh-lg);border-color:#d4dae3}
+.post .cat{font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:.6rem}
+.post h3{margin:0 0 .6rem;font-size:1.14rem;line-height:1.3}
+.post h3 a{color:var(--ink)}
+.post h3 a:hover{color:var(--accent-dk)}
+.post p{font-size:.95rem;flex:1}
+.post .foot{font-size:.84rem;color:var(--ink-3);margin-top:.8rem;
+  padding-top:.8rem;border-top:1px solid var(--line)}
