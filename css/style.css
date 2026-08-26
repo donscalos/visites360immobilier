@@ -38,8 +38,10 @@ header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.92);
 .logo{font-family:var(--fh);font-weight:800;font-size:1.08rem;color:var(--ink);letter-spacing:-.02em}
 .logo span{color:var(--accent)}
 .nav nav{display:flex;gap:1.6rem;align-items:center}
-.nav nav a{font-size:.92rem;color:var(--ink-2);font-weight:500}
-.nav nav a:hover,.nav nav a.on{color:var(--ink)}
+/* :not(.btn) indispensable : sans lui, .nav nav a (0,1,2) ecrase .btn-1 (0,1,0)
+   et le bouton se retrouve avec du texte gris sur fond vert. */
+.nav nav a:not(.btn){font-size:.92rem;color:var(--ink-2);font-weight:500}
+.nav nav a:not(.btn):hover,.nav nav a:not(.btn).on{color:var(--ink)}
 .burger{display:none}
 @media(max-width:860px){
   .nav nav a:not(.btn){display:none}
